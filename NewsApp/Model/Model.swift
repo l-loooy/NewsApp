@@ -44,3 +44,7 @@ func parseJSON() {
         returnArray.append(newArticle)
     }
 }
+
+
+
+//изменения для теста слияния master с test-branch
