@@ -16,5 +16,16 @@ struct Article {
     var url: String
     var urlToImage: String
     var publishedAt: String
-    var source: String
+    var sourceName: String
+    
+    init(dictionary: Dictionary<String, Any>) {
+        author = dictionary["author"] as? String ?? ""
+        title = dictionary["title"] as? String ?? ""
+        description = dictionary["description"] as? String ?? ""
+        url = dictionary["url"] as? String ?? ""
+        urlToImage = dictionary["urlToImage"] as? String ?? ""
+        publishedAt = dictionary["publishedAt"] as? String ?? ""
+        
+        sourceName = (dictionary["source"] as? Dictionary<String, Any> ?? ["":""])["name"] as? String ?? ""
+    }
 }
